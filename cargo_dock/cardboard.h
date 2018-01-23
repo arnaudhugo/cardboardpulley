@@ -13,7 +13,7 @@ typedef struct      s_room
 
 //----------------------------- Autres ---------------------------------
 void                my_putchar(char c);
-char		        *readline(void);
+char		        readline(void);
 void		        my_putstr(char *str);
-void                aff_map();
+void                aff_map(int x, int y);
 #endif

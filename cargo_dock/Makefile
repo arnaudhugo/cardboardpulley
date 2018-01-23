@@ -1,21 +1,24 @@
-CC      = gcc
-NAME    = not_mg
-SRC     = my_putchar.c
-OBJ     = $(SRC:%.c=%.o)
-RM      = rm -f
+CC		= gcc
+NAME	= not_mg
+SRC		= main.c			\
+		  aff_map.c			\
+	  	  readline.c		\
+	 	  my_putstr.c		\
+	  	  my_putchar.c
+OBJ	= $(SRC:%.c=%.o)
+RM	= rm -f
 
 $(NAME):	$(OBJ)
-		ar r $(NAME) $(OBJ)
-		ranlib $(NAME)
+			$(CC) $(OBJ) -o $(NAME)
 
 all:		$(NAME)
 
 clean:
-		$(RM) $(OBJ)
+			$(RM) $(OBJ)
 
-fclean:			clean
-		$(RM) $(NAME)
+fclean:				clean
+			$(RM) $(NAME)
 
-re:		fclean all
+re:			fclean all
 
 .PHONY:		all clean fclean re

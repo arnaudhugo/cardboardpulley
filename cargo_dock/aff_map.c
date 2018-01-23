@@ -1,6 +1,8 @@
 #include "cardboard.h"
 
-void        aff_map() {
+void        aff_map(int x, int y) {
+    int     o_x;
+    int     o_y;
     int     i;
     int     j;
     char    map[12][15] = {
@@ -18,10 +20,18 @@ void        aff_map() {
             {'X', 'X', 'X', 'X', 'X', 'X', 'X', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
     };
 
+    o_x = 0;
+    o_y = 0;
+
+    map[y][x] = 'i';
+
     for (i = 0; i < 12; i++) {
         for (j = 0; j < 15; j++) {
             my_putchar(map[i][j]);
         }
         my_putchar('\n');
     }
+
+    o_x = x;
+    o_y = y;
 }
