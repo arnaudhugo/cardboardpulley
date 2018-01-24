@@ -15,5 +15,5 @@ typedef struct      s_room
 void                my_putchar(char c);
 char		        readline(void);
 void		        my_putstr(char *str);
-void                aff_map(int x, int y);
+void                aff_map(int *x, int *y, int *o_x, int *o_y);
 #endif
