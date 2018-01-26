@@ -21,6 +21,7 @@ void        aff_map(int *x, int *y, int *o_x, int *o_y) {
     i = 0;
     j = 0;
 
+    my_putstr("Press 'q' to quit.\n\n");
     if (map[*y][*x] == 'X') 
     {
         *x = *o_x;
