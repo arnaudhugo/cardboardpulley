@@ -13,17 +13,18 @@ int         main(int argc, char *argv[]) {
 
     my_putstr("\033c\n"); // Clear terminal
     aff_map(&x, &y, &o_x, &o_y);
+    
     while (t != 'q')
     {
         if (t == 'd') 
         {
-            my_putstr("\033c\n"); // Clear terminal
+            my_putstr("\033c\n");
             x = x + 1;
             aff_map(&x, &y, &o_x, &o_y);
         } 
         else if (t == 'a') 
         {
-            my_putstr("\033c\n"); // Clear terminal
+            my_putstr("\033c\n");
             o_x = x;
             o_y = y;
             x = x - 1;
@@ -31,7 +32,7 @@ int         main(int argc, char *argv[]) {
         } 
         else if (t == 'w') 
         {
-            my_putstr("\033c\n"); // Clear terminal
+            my_putstr("\033c\n");
             o_x = x;
             o_y = y;
             y = y - 1;
@@ -39,10 +40,15 @@ int         main(int argc, char *argv[]) {
         } 
         else if (t == 's') 
         {
-            my_putstr("\033c\n"); // Clear terminal
+            my_putstr("\033c\n");
             o_x = x;
             o_y = y;
             y = y + 1;
+            aff_map(&x, &y, &o_x, &o_y);
+        }
+        else
+        {
+            my_putstr("\033c\n");
             aff_map(&x, &y, &o_x, &o_y);
         }
         if (x == 8 && y == 0)
