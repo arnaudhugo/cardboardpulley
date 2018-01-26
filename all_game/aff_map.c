@@ -55,7 +55,7 @@ void        aff_map(int *x, int *y, int *o_x, int *o_y, int *all, int *key, int 
             }      
         }
 
-        while (i < 12)
+        while (i < 13)
         {
             while (j < 15)
             {
