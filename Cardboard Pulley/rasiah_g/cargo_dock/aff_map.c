@@ -18,6 +18,9 @@ void        aff_map(int *x, int *y, int *o_x, int *o_y) {
             {'X', 'X', 'X', 'X', 'X', 'X', 'X', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
     };
 
+    i = 0;
+    j = 0;
+
     if (map[*y][*x] == 'X') 
     {
         *x = *o_x;
@@ -30,16 +33,18 @@ void        aff_map(int *x, int *y, int *o_x, int *o_y) {
         *o_x = *x;
         *o_y = *y;
     }
-    for (i = 0; i < 12; i++) { // A changer en while
-        for (j = 0; j < 15; j++) { // A changer en while
+    while (i < 12)
+    {
+        while (j < 15)
+        {
             my_putchar(map[i][j]);
+            j++;
         }
         my_putchar('\n');
+        j = 0;
+        i++;
     }
-    if (map[*y][*x] == map[0][8])
-    {
-        //my_putstr("To be continued...\n");
-    }
+    
     o_x = x;
     o_y = y;
 }
