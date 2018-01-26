@@ -1,7 +1,7 @@
-#include <unistd.h>
+#include    <unistd.h>
 
 void		my_putstr(char *str) {
-    int end;
+    int     end;
 
     end = 0;
     while (*(str + end) != '\0') {
