@@ -1,4 +1,4 @@
-#include "cardboard.h"
+#include    "cardboard.h"
 
 void        aff_map(int *x, int *y, int *o_x, int *o_y) {
     int     i;
@@ -18,24 +18,28 @@ void        aff_map(int *x, int *y, int *o_x, int *o_y) {
             {'X', 'X', 'X', 'X', 'X', 'X', 'X', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
     };
 
-    if (map[*y][*x] == 'X') {
+    if (map[*y][*x] == 'X') 
+    {
         *x = *o_x;
         *y = *o_y;
         map[*y][*x] = 'i'; 
     }
-    else {
+    else 
+    {
         map[*y][*x] = 'i';
         *o_x = *x;
         *o_y = *y;
     }
-
-    for (i = 0; i < 12; i++) {
-        for (j = 0; j < 15; j++) {
+    for (i = 0; i < 12; i++) { // A changer en while
+        for (j = 0; j < 15; j++) { // A changer en while
             my_putchar(map[i][j]);
         }
         my_putchar('\n');
     }
-
+    if (map[*y][*x] == map[0][8])
+    {
+        //my_putstr("To be continued...\n");
+    }
     o_x = x;
     o_y = y;
 }
