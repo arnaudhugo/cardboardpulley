@@ -126,6 +126,11 @@ int         main(int argc, char *argv[]) {
             room = 2;
             aff_map(&x, &y, &o_x, &o_y, &all, &key, &get, &room);
         }
+        if (x == 11 && y == 0 && room ==2)
+        {
+            my_putstr("To be continued...\n");
+            return (0);
+        }
         t = readline();
     }
     return (0);
