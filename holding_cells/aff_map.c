@@ -134,25 +134,33 @@ void        aff_map(int *x, int *y, int *o_x, int *o_y, int *all, int *key, int 
                 *o_y = *y;
             }     
         }
-            
-        for (i = 0; i < 6; i++) 
+
+        i = 0;
+        j = 0;
+
+        while (i < 6)
         {
-            for (j = 0; j < 26; j++) 
+            while (j < 26)
             {
-                if (*key == 1 && i == 4 && j == 24 && *get > 1)
+                if (*key == 1 && i == 4 && j == 23 && *get > 1)
                 {
-                    if (*x == 4 && *y == 24)
-                        map[4][24] = 'i';    
+                    if (*x == 4 && *y == 23)
+                        map[4][23] = 'i';    
                     else
-                        map[4][24] = ' ';
+                        map[4][23] = ' ';
                 }
                 if (*key == 1 && i == 0 && j == 11 && *get == 3)
                     my_putchar(' ');
                 else 
                     my_putchar(map[i][j]);
+                j++;
             }
             my_putchar('\n');
+            j = 0;
+            i++;
         }
         my_putchar('\n');
+        if (*key == 1 && *get == 2)
+            my_putstr("You got the key \n");
     }
 }
