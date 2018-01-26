@@ -90,7 +90,7 @@ void        aff_map(int *x, int *y, int *o_x, int *o_y, int *all, int *key, int 
                 *y = *o_y;
                 map[*y][*x] = 'i';
             }
-            else if (*key == 1 && *get == 3 && map[4][8] == ' ')
+            else if (*key == 1 && *get == 3 && map[4][8] == ' ' && map[*y][*x] == 'x')
             {
                 map[*y][*x] = 'i';
                 *o_x = *x;

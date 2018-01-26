@@ -1,8 +1,11 @@
 /*
-** Cette fonction permet de récuper une ligne
-** de moins de 50 caractères sur l'entrée standard.
-** La fonction ne prend pas de paramètre et renvoit une chaîne
-** allouée (pensez a free()).
+** readline.c for Cardboard Pulley in /home/arnaud/Documents/cardboard_pulley
+** 
+** Made by ARNAUD Hugo
+** Login   <arnaud_h@etna-alternance.net>
+** 
+** Started on  Mon Jan  22 09:47:41 2018 ARNAUD Hugo
+** Last update Mon Jan  22 09:48:04 2018 ARNAUD Hugo
 */
 #include	<stdlib.h>
 #include	<unistd.h>
